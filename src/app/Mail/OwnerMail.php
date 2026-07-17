@@ -19,8 +19,8 @@ class OwnerMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Новое сообщение с сайта',
             to: [config('mail.owner_email')],
+            subject: 'Новое сообщение с сайта',
         );
     }
 
