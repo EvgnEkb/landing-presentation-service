@@ -71,8 +71,8 @@ class ContactController extends Controller
         }
 
         try {
-            Mail::to(config('mail.owner_email'))->send(new OwnerMail($validated));
-            Mail::to($validated['email'])->send(new UserCopyMail($validated));
+            Mail::to(config('mail.owner_email'))->queue(new OwnerMail($validated));
+            Mail::to($validated['email'])->queue(new UserCopyMail($validated));
         } catch (\Exception $e) {
             Log::error('Email sending failed: ' . $e->getMessage());
 

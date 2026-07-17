@@ -42,3 +42,6 @@ install:
 	docker compose run --rm --no-deps app composer install --no-interaction --prefer-dist
 
 setup: build up install migrate
+
+queue-start:
+	docker compose exec app php artisan queue:work
