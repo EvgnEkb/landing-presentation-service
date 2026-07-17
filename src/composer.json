@@ -38,6 +38,8 @@
     },
     "scripts": {
         "cs-fix": "./vendor/bin/php-cs-fixer fix",
+        "cs-check": "./vendor/bin/php-cs-fixer fix --dry-run",
+        "cs-fix-app": "./vendor/bin/php-cs-fixer fix app/",
         "phpstan": "./vendor/bin/phpstan analyse --memory-limit=2G",
         "setup": [
             "composer install",
