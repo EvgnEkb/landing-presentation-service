@@ -24,15 +24,19 @@ cp src/.env.example src/.env
 
 # 4. Собрать контейнеры, поднять сервисы, установить зависимости и выполнить миграции
 make setup
+
+#5. Запустить очереди
+make queue-start
 ```
 
 ### Доступные сервисы после запуска
 
-| Сервис | URL |
-|---|---|
-| API | `http://localhost:8080/api/contact` |
-| Swagger UI | `http://localhost:8080/api/documentation` |
-| Health check | `http://localhost:8080/up` |
+| Сервис        | URL |
+|---------------|---|
+| WEB форма     | `http://localhost:8080/` |
+| API           | `http://localhost:8080/api/contact` |
+| Swagger UI    | `http://localhost:8080/api/documentation` |
+| Health check  | `http://localhost:8080/up` |
 | Mailpit (web) | `http://localhost:8025` |
 
 ---
