@@ -19,8 +19,8 @@ class UserCopyMail extends Mailable
     public function envelope(): Envelope
     {
         return new Envelope(
-            subject: 'Копия вашего обращения',
             to: [$this->data['email']],
+            subject: 'Копия вашего обращения',
         );
     }
 

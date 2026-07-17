@@ -195,7 +195,6 @@
 <body>
     <div class="card">
         <h1>Обратная связь</h1>
-        <p class="subtitle">Оставьте сообщение — мы ответим на email</p>
 
         <div id="alert" class="alert"></div>
 
@@ -253,12 +252,6 @@
                         <span class="label">Mailpit</span>
                         <span class="url">:8025</span>
                     </a>
-                </li>
-                <li>
-                    <span class="info">
-                        <span class="label">API</span>
-                        <span class="url">POST /api/contact</span>
-                    </span>
                 </li>
             </ul>
         </nav>

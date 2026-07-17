@@ -2,6 +2,7 @@
 
 up:
 	docker compose up -d
+	@echo "🌐  Приложение запущено: http://localhost:8080"
 
 down:
 	docker compose down
@@ -41,7 +42,8 @@ shell:
 install:
 	docker compose run --rm --no-deps app composer install --no-interaction --prefer-dist
 
-setup: build up install migrate
-
 queue-start:
 	docker compose exec app php artisan queue:work
+
+setup: build up install migrate
+	@echo "🌐  Приложение запущено: http://localhost:8080"
