@@ -19,7 +19,7 @@ fix:
 	docker compose exec app composer cs-fix
 
 stan:
-	docker compose exec app ./vendor/bin/phpstan analyse --memory-limit=2G
+	docker compose exec app composer phpstan
 
 migrate:
 	docker compose exec app php artisan migrate
